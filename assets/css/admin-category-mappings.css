@@ -1,0 +1,25 @@
+.sfwd-question_page_questions-category-mapping table.categories td select {
+	max-width: 100%;
+	text-align: center;
+}
+
+.sfwd-question_page_questions-category-mapping .edit-mode {
+	display: none;
+}
+
+.sfwd-question_page_questions-category-mapping .actions .save {
+	padding: 5px 10px;
+}
+
+.sfwd-question_page_questions-category-mapping .actions .cancel,
+.sfwd-question_page_questions-category-mapping .actions .unlink {
+	vertical-align: sub;
+}
+
+.sfwd-question_page_questions-category-mapping .actions .unlink {
+	color: #b32d2e;
+}
+
+.sfwd-question_page_questions-category-mapping tr.not-mapped {
+	background-color: #fff8dc;
+}
