@@ -4,11 +4,11 @@
  *
  * A helper class to run CRUD operations on LearnDash Questions category table.
  *
- * @package LearnDashQuestionsCategoryMappingUK
+ * @package LDQCM
  * @since 1.0.0
  */
 
-namespace LearnDashQuestionsCategoryMappingUK;
+namespace LDQCM;
 
 // Exit if accessed directly.
 if ( ! defined( 'ABSPATH' ) ) {

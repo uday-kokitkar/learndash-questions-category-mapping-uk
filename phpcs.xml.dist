@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<ruleset name="LearnDash Questions Category Mapping">
+    <description>WordPress Coding Standards for LearnDash Questions Category Mapping Plugin</description>
+
+    <!-- What to scan -->
+    <file>.</file>
+
+    <!-- Exclude patterns -->
+    <exclude-pattern>/vendor/*</exclude-pattern>
+    <exclude-pattern>/node_modules/*</exclude-pattern>
+    <exclude-pattern>/assets/js/*.min.js</exclude-pattern>
+    <exclude-pattern>/assets/css/*.min.css</exclude-pattern>
+
+    <!-- How to scan -->
+    <!-- Show sniff codes in all reports -->
+    <arg value="ps"/>
+    <!-- Show progress -->
+    <arg name="colors"/>
+    <!-- Enables parallel processing -->
+    <arg name="parallel" value="8"/>
+    <!-- Limit to PHP files -->
+    <arg name="extensions" value="php"/>
+
+    <!-- Rules: WordPress Coding Standards -->
+    <rule ref="WordPress">
+        <!-- Allow short array syntax -->
+        <exclude name="Generic.Arrays.DisallowShortArraySyntax"/>
+    </rule>
+
+    <!-- Rules: WordPress-Extra -->
+    <rule ref="WordPress-Extra"/>
+
+    <!-- Rules: WordPress-Docs -->
+    <rule ref="WordPress-Docs"/>
+
+    <!-- Verify that everything in the global namespace is prefixed -->
+    <rule ref="WordPress.NamingConventions.PrefixAllGlobals">
+        <properties>
+            <property name="prefixes" type="array">
+                <element value="ldqcm"/>
+                <element value="LDQCM"/>
+            </property>
+        </properties>
+    </rule>
+
+    <!-- Check for PHP cross-version compatibility -->
+    <config name="testVersion" value="7.4-"/>
+    <rule ref="PHPCompatibilityWP"/>
+
+    <!-- Allow for theme specific exceptions to the minimum supported WP version -->
+    <config name="minimum_supported_wp_version" value="5.0"/>
+</ruleset>

@@ -1,0 +1,20 @@
+# Composer
+/vendor/
+composer.lock
+
+# Node modules
+node_modules/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Build files
+*.min.js.map
+*.min.css.map

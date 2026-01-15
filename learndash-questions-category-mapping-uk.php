@@ -16,7 +16,7 @@
  * @package LearnDashQuestionsCategoryMappingUK
  */
 
-namespace LearnDashQuestionsCategoryMappingUK;
+namespace LDQCM;
 
 // Exit if accessed directly.
 if ( ! defined( 'ABSPATH' ) ) {
@@ -55,7 +55,7 @@ function ldqcm_activate() {
 	require_once LDQCM_PLUGIN_DIR . 'includes/class-categories-crud-helper.php';
 	$crud_helper = Categories_CRUD_Helper::get_instance();
 	$crud_helper->maybe_add_column();
-	
+
 	// Flush rewrite rules.
 	flush_rewrite_rules();
 }

@@ -8,7 +8,7 @@
  * @since 1.0.0
  */
 
-namespace LearnDashQuestionsCategoryMappingUK;
+namespace LDQCM;
 
 // Exit if accessed directly.
 if ( ! defined( 'ABSPATH' ) ) {
@@ -190,7 +190,7 @@ if ( class_exists( '\LearnDash_Settings_Page' ) ) {
 		 * Set form action value to the form.
 		 *
 		 * @param string $form  Form HTML.
-		 * @param int    $start 1 if the form open tag.
+		 * @param bool   $start true if the form open tag.
 		 *
 		 * @return string Modified form element.
 		 */

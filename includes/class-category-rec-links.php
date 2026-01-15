@@ -10,7 +10,7 @@
  * @since 1.0.0
  */
 
-namespace LearnDashQuestionsCategoryMappingUK;
+namespace LDQCM;
 
 // Exit if accessed directly.
 if ( ! defined( 'ABSPATH' ) ) {
@@ -49,7 +49,7 @@ class Category_Rec_Links {
 	 * @return void
 	 */
 	public function enqueue_frontend_assets() {
-		if ( ! is_singular( 'sfwd-quiz' ) && ! $this->is_test_history_page() ) {
+		if ( ! is_singular( 'sfwd-quiz' ) ) {
 			return;
 		}
 
@@ -82,17 +82,6 @@ class Category_Rec_Links {
 		}';
 
 		wp_add_inline_style( 'learndash-front', $custom_css );
-	}
-
-	/**
-	 * Check if current page is test history page.
-	 *
-	 * @return bool
-	 */
-	private function is_test_history_page() {
-		// This is a placeholder. Implement based on your theme/setup.
-		// Example: return is_page( 'test-history' );
-		return false;
 	}
 
 	/**

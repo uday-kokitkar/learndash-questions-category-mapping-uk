@@ -8,7 +8,7 @@
  * @since 1.0.0
  */
 
-namespace LearnDashQuestionsCategoryMappingUK;
+namespace LDQCM;
 
 // Exit if accessed directly.
 if ( ! defined( 'ABSPATH' ) ) {

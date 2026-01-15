@@ -8,7 +8,7 @@
  * @since 1.0.0
  */
 
-namespace LearnDashQuestionsCategoryMappingUK;
+namespace LDQCM;
 
 // Exit if accessed directly.
 if ( ! defined( 'ABSPATH' ) ) {
@@ -128,12 +128,12 @@ class Map_Categories extends \WP_List_Table {
 		$this->views();
 		$this->prepare_items();
 		$this->search_box( __( 'Search Category', 'learndash-questions-category-mapping-uk' ), 'ldqcm-category-search' );
-		
+
 		// Add hidden field for quiz_id if present.
 		if ( isset( $_REQUEST['quiz_id'] ) && ! empty( $_REQUEST['quiz_id'] ) ) { // phpcs:ignore WordPress.Security.NonceVerification.Recommended
 			echo '<input type="hidden" name="quiz_id" value="' . esc_attr( (int) $_REQUEST['quiz_id'] ) . '" />'; // phpcs:ignore WordPress.Security.NonceVerification.Recommended
 		}
-		
+
 		$this->display();
 	}
 
@@ -218,7 +218,7 @@ class Map_Categories extends \WP_List_Table {
 					$arr[ $index ]['step_link'] = learndash_get_step_permalink( $child_step_id, $arr[ $index ]['course_id'] );
 				}
 
-				$index++;
+				++$index;
 			}
 		}
 		$this->items = $arr;
